@@ -1,8 +1,8 @@
 package ex2;
 
 public class Pair<A, B> {
-    private A first;
-    private B second;
+    private final A first;
+    private final B second;
 
     public Pair(A first, B second) {
         this.first = first;
@@ -29,6 +29,5 @@ public class Pair<A, B> {
     public String toString() {
         return "(" + first + ", " + second + ") :: Pair[" + first.getClass().getSimpleName() + ", " + second.getClass().getSimpleName() + "]";
     }
-
 
 }

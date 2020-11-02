@@ -9,6 +9,10 @@ public class Leaf implements Tree {
         this.val = val;
     }
 
+    public Integer getVal() {
+        return val;
+    }
+
     @Override
     public int size() {
         return 1;
@@ -21,26 +25,26 @@ public class Leaf implements Tree {
 
     @Override
     public Set<Integer> values() {
-        return null;
+        return Set.of(this.val);
     }
 
     @Override
     public Integer sum() {
-        return null;
+        return this.val;
     }
 
     @Override
     public Integer min() {
-        return null;
+        return this.val;
     }
 
     @Override
     public Integer max() {
-        return null;
+        return this.val;
     }
 
     @Override
     public boolean isSorted() {
-        return false;
+        return true;
     }
 }

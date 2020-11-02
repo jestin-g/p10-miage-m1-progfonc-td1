@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.testng.AssertJUnit.*;
 
 public class AppTest {
 
@@ -72,17 +72,17 @@ public class AppTest {
 
     @Test public void testValeurs() {
         final Set<Integer> contenu = Set.of(1,2,3);
-        assertEquals(Set.of(), arbre0().valeurs());
-        assertEquals(contenu, arbre1().valeurs());
-        assertEquals(contenu, arbre2().valeurs());
-        assertEquals(contenu, arbre3().valeurs());
+        assertEquals(Set.of(), arbre0().values());
+        assertEquals(contenu, arbre1().values());
+        assertEquals(contenu, arbre2().values());
+        assertEquals(contenu, arbre3().values());
     }
 
     @Test public void testValeur() {
-        assertEquals(null, arbre0().somme());
-        assertEquals((Integer) 6, arbre1().somme());
-        assertEquals((Integer) 6, arbre2().somme());
-        assertEquals((Integer) 6, arbre3().somme());
+        assertEquals(null, arbre0().sum());
+        assertEquals((Integer) 6, arbre1().sum());
+        assertEquals((Integer) 6, arbre2().sum());
+        assertEquals((Integer) 6, arbre3().sum());
     }
 
     @Test public void testMin() {
@@ -100,10 +100,10 @@ public class AppTest {
     }
 
     @Test public void testEstTrie() {
-        assertTrue(arbre0().estTrie());
-        assertTrue(arbre1().estTrie());
-        assertFalse(arbre2().estTrie());
-        assertFalse(arbre3().estTrie());
+        assertTrue(arbre0().isSorted());
+        assertTrue(arbre1().isSorted());
+        assertFalse(arbre2().isSorted());
+        assertFalse(arbre3().isSorted());
     }
 
 }

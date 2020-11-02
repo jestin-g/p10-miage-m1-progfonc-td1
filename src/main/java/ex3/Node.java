@@ -70,7 +70,7 @@ public class Node implements Tree {
 
     @Override
     public boolean isSorted() {
-        return false;
+        return sortCondition1() && sortCondition2();
     }
 
     private boolean sortCondition1() {
